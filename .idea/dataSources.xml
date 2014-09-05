@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1583471683">
+    <data-source source="LOCAL" name="Rails autokart: production" uuid="a29890ef-04c2-417b-beb2-d2eec5a52c81">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:autokart_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
