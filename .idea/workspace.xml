@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11926fb4-1c0f-42a1-88da-879748e49eb5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/autokart.iml" afterPath="$PROJECT_DIR$/.idea/autokart.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/Home.html.erb" afterPath="$PROJECT_DIR$/app/views/pages/Home.html.erb" />
     </list>
     <ignored path="autokart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +66,7 @@
       <file leaf-file-name="Home.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pages/Home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="57" selection-start="75" selection-end="75" vertical-scroll-proportion="0.03046595" vertical-offset="0" max-vertical-offset="558">
+            <state line="4" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.1218638" vertical-offset="0" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -392,7 +391,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -464,7 +463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/Home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="57" selection-start="75" selection-end="75" vertical-scroll-proportion="0.03046595" vertical-offset="0" max-vertical-offset="558">
+        <state line="4" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.1218638" vertical-offset="0" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
