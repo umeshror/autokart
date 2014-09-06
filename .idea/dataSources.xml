@@ -7,6 +7,12 @@
       <jdbc-url>jdbc:postgresql:autokart_production</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails autokart: development" uuid="ddb3c52c-fb1a-4a81-ad9c-deaa7126479a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Sites\autokart\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 
