@@ -1,4 +1,35 @@
 Rails.application.routes.draw do
+  #
+  #get 'items/index'
+  #
+  #get 'items/show'
+  #
+  #get 'items/new'
+  #
+  #get 'items/create'
+  #
+  #get 'items/update'
+  #
+  #get 'items/delete'
+  #
+  #get 'types/index'
+  #
+  #get 'types/create'
+  #
+  #get 'types/update'
+  #
+  #get 'types/delete'
+
+  resources :brands do
+    resources :cars do
+      resources :products do
+        resources :types do
+          resources :items
+        end
+      end
+    end
+  end
+
   root 'pages#Home'
 
   get 'pages/About_Us'

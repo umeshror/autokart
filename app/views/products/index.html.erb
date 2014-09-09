@@ -1,0 +1,15 @@
+
+<%= link_to 'New Category' %>
+<%= form_for([@brand,@car,@product]) do |f| %>
+    <%=  %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
+
+
+<% @car.products.each do |product| %>
+<td><%= link_to "#{product.name}", brand_car_product_types_path(:product_id => product.id) %><br>
+</td>
+
+<% end %>

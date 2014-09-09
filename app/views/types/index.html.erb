@@ -1,0 +1,16 @@
+
+<%= link_to 'New SubCategory' %>
+<!--brand_car_product_type_path- @brand,@car,@product,@type]-->
+<%= form_for([@brand,@car,@product,@type]) do |f| %>
+    <%=  %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
+
+
+<% @product.types.each do |type| %>
+    <td><%= link_to "#{type.name}", brand_car_product_type_items_path(:type_id => type.id) %><br>
+    </td>
+
+<% end %>

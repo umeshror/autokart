@@ -1,0 +1,33 @@
+<%= link_to "Add new Item to SELL!!!" %>
+<%= form_for([@brand,@car,@product,@type,@item])  do |f|%>
+    <%=  %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+<br>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    <br>
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <br>
+    <%= f.submit %>
+
+<% end %>
+
+<% @type.items.each do |item| %>
+
+    <%= link_to "#{item.name}", brand_car_product_type_item_path(:id=> item.id) %><br>
+    <%= item.image_url %><br>
+    <%= item.price %><br>
+    <%= item.description %><br>
+    <%= item.manufacturer %><br>
+
+
+<% end %>

@@ -1,7 +1,26 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.navbar{
-  background-color: #ffffff;
-  border-bottom-color: #269abc;
+
+.searchbar{
+  border-radius: 5px;
+  border-color: #269abc ;
+}
+
+.autopart-title{
+  font-size: 1.7em;
+  margin-bottom: .2em;
+}
+.part-title{
+  font-size: 1.7em;
+  margin-bottom: .2em;
+}
+.brand-name{
+  margin-bottom: 5px;
+}
+.model-name{
+  margin-top: 5px;
+}
+.form-margin{
+  margin-top: 10px
 }

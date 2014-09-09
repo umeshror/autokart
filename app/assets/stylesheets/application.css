@@ -14,3 +14,28 @@
  *= require_tree .
  *= require_self
  */
+.navbar{
+    background-color: #ffffff;
+    border-bottom-color: #269abc;
+
+
+}
+ul{
+    text-align: right;list-style-type: none; margin-top: auto;
+    margin-top: 10px;
+}
+li{
+    display: inline ;
+
+
+}
+.navbar>.container>.navbar-header{
+    padding-top: 10px;
+    margin-left: 0px ;
+    padding-left: 0px;
+
+
+}
+body>.container{
+    margin-top: 70px
+}

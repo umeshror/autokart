@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brand.name %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @brand.history %>
+</p>
+
+<p>
+  <%= link_to 'Add new Car', "#new" %>
+
+<div id="new" style="display: inline">
+  <%= form_for([@brand,@car]) do|f| %>
+      <%= f.hidden_field :brand_id %>
+
+      <div class="field">
+        <%= f.label :name %> :
+        <%= f.text_field :name %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+
+  <% end %>
+
+</div>
+</p>
+
+<p>
+  <%= @brand.cars.each do|car|  %>
+    <%= link_to "#{car.name}",brand_car_products_path(:brand_id => @brand.id,:car_id => car.id ) %><br>
+  <% end %>
+
+</p>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
+

@@ -9,16 +9,26 @@
 <body>
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header" style="padding-top: 10px; margin-left: 0px ; padding-left: 0px ">
+  <div class="container ">
+    <div class="navbar-header" >
 
       <%= link_to image_tag('logo.PNG'),root_path %>
 
     </div>
+    <div>
+      <ul>
+        <li> <%= link_to 'Login', "#" %> </li>
+        <li>  | </li>
+        <li> <%= link_to 'Signup', "#" %></li>
+      </ul>
+    </div>
+
   </div>
+
+
+
 </div>
-<br><br>
-<div class="container">
+<div class="container " >
 <%= yield %>
 </div>
 </body>
