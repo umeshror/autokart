@@ -1,16 +1,63 @@
 
-<%= link_to 'New SubCategory' %>
-<!--brand_car_product_type_path- @brand,@car,@product,@type]-->
-<%= form_for([@brand,@car,@product,@type]) do |f| %>
-    <%=  %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
+
+<% if @user == "admin"%>
+        <%= link_to 'New SubCategory' %>
+        <!--brand_car_product_type_path- @brand,@car,@product,@type]-->
+        <%= form_for([@brand,@car,@product,@type]) do |f| %>
+            <%=  %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+            <%= f.submit %>
+        <% end %>
 <% end %>
 
+    <!--<div class="row">-->
+        <!--<div class="col-md-12 ">-->
+              <!--<div class="panel panel-default searchbar">-->
 
-<% @product.types.each do |type| %>
-    <td><%= link_to "#{type.name}", brand_car_product_type_items_path(:type_id => type.id) %><br>
-    </td>
+                <!--timepass-->
+              <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+  <div class="types row">
+    <div class="col-md-3">
+        <div class="panel panel-default typesbar">
+           <div class="product-sidebar">
+                <% @car.products.each do |product| %>
+                    <div class="sidebar-menu">
+                    <td><%= link_to "#{product.name}", brand_car_product_types_path(:brand_id => @brand.id, :car_id => @car.id , :product_id => product.id )  %> </td>
+                    <br>
+                    </div>
+                <% end %>
+           </div>
+        </div>
+    </div>
 
-<% end %>
+  <div class="col-md-9">
+    <div class="panel panel-body typesbar">
+
+      <% @product.types.each do |type| %>
+          <div class="type-title col-md-12">
+          <%= type.name %><br>
+          </div>
+                <% @items = type.items.all %>
+
+                        <% @items.each do |item| %>
+
+                              <div class="col-md-6">
+                                <div class="panel panel-default panel-success panel-item">
+                                           <b> <%= link_to "#{item.name}", brand_car_product_type_item_path(:id=> item.id,:type_id => type.id) %>
+                                           </b><br><b>Price :</b> Rs.<%= item.price  %>
+                                              <br><%= image_tag item.image_url,size: "55x55" %>
+                                              <br><b>Manufacturer: </b><%= item.manufacturer %>
+                                              <br><b>Description: </b> <%= item.description %>
+                                </div>
+                              </div>
+                        <% end %>
+
+
+
+      <% end %>
+    </div>
+  </div>
+</div>

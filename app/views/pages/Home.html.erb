@@ -1,6 +1,6 @@
 <div class="panel-body panel-default panel searchbar">
 
-
+<div class="row">
   <div class="col-md-6">
 
     <div class="panel-default">
@@ -26,14 +26,36 @@
                       </select>
                     </div>
 
-                    <div class="input-group col-md-7 form-margin">
-                      <select class="form-control" name="bootstrap-theme" id="theme_chooser">
-                                  <option value="AllCT">Select Category</option>
+                    <!--<div class="input-group col-md-7 form-margin">-->
+                      <!--<select class="form-control" name="bootstrap-theme" id="theme_chooser">-->
+                                  <!--<option value="AllCT">Select Category</option>-->
+                                  <!--<option value=></option>-->
+                                 <!---->
+                      <!--</select>-->
+                    <!--</div>-->
+                  <div class="btn-group input-group col-md-7 form-margin">
+                                <button type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown">
+                                  -Select Category- <span class="caret "></span>
+                                </button>
+                                <ul class="dropdown-menu btn-block" role="menu">
                                   <%= @products.each do |product| %>
-                                  <option value=<%= "#{product.name}" %>><%= product.name %></option>
+
+                                  <li><a href="#"><%=link_to "#{product.name}",
+                                                             brand_car_product_types_path(:brand_id=> @brand.id,
+                                                                                          :car_id => @car.id,
+                                                                                          :product_id => product.id) %></a></li>
+
                                   <% end %>
-                      </select>
-                    </div>
+                                </ul>
+                  </div>
+
+                   <div class="input-group col-md-7 form-margin">
+
+                       <button type="button" class="btn btn-primary form-margin btn-block" >
+                            Submit
+                       </button>
+
+                   </div>
 
     </div>
   </div>
@@ -60,8 +82,32 @@
                     </select>
                   </div>
 
+                  <div class="input-group col-md-7 form-margin">
+
+                    <button type="button" class="btn btn-primary form-margin btn-block" >
+                      Submit
+                    </button>
+
+                  </div>
+
 
     </div>
   </div>
+</div>
 
+
+</div>
+<div class="row">
+<% @items.each do |item| %>
+
+    <div class="col-md-6">
+      <div class="panel panel-default panel-success panel-item">
+       <b> <%= link_to "#{item.name}", brand_car_product_type_item_path(:id=> item.id,:item_id=> item.id, :type_id=> item.type.id,:product_id=> item.type.product.id,:car_id=> item.type.product.car.id,:brand_id => item.type.product.car.brand.id) %>
+       </b><br><b>Price :</b> Rs.<%= item.price  %>
+        <br><%= image_tag item.image_url,size: "55x55" %>
+        <br><b>Manufacturer: </b><%= item.manufacturer %>
+        <br><b>Description: </b> <%= item.description %>
+      </div>
+    </div>
+<% end %>
 </div>

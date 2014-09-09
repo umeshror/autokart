@@ -1,3 +1,42 @@
 // Place all the styles related to the Types controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.typesbar{
+  border-color: #c0c0c0;
+}
+.product-sidebar{
+
+  text-align: center;
+  padding-top: 5px;
+  text-decoration: none;
+
+
+
+}
+.sidebar-menu{
+  margin-top: 5px;
+  font-weight: bold;
+}
+.product-sidebar>td{
+  text-decoration-color: red;
+}
+.type-title{
+  text-transform: uppercase;
+  text-align: center;
+  background-color: powderblue;
+  text-decoration: #2E2F30;
+  text-decoration-style: none;
+  font-style: none;
+  font-weight: bold;
+}
+.type-text{
+  text-decoration: none;
+}
+
+.panel-item{
+  margin-top: 6.5px;
+  text-align: center;
+
+
+}
