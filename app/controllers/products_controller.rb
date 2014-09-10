@@ -17,7 +17,9 @@ class ProductsController < ApplicationController
     @product = @car.products.new(product_params)
 
     if @product.save
-      redirect_to brand_car_products_path(:car_id =>@car.id)
+      redirect_to brand_car_products_path(:car_id =>@car.id) ,:notice => "Successfullly created...!!!"
+    else
+      redirect_to brand_car_products_path(:car_id =>@car.id) ,:notice => "Name should be unique...!!!"
     end
   end
 

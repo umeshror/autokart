@@ -12,7 +12,7 @@
 
                                 <option value="">-Select Brand-</option>
                                 <%= @brands.each do |brand| %>
-                                <option value=<%= value ="#{brand.name}" %>><%= brand.name %></option>
+                                <option value=<%= value =brand.name %>><%= brand.name %></option>
                                 <% end %>
                       </select>
                     </div>
@@ -21,7 +21,7 @@
                       <select class="form-control" name="bootstrap-theme" id="theme_chooser">
                                 <option value="">-Select Model-</option>
                                 <%= @cars.each do |car| %>
-                                <option value=<%= "#{car.name}" %>><%= car.name %></option>
+                                <option value=<%= car.name %>><%= car.name %></option>
                                 <% end %>
                       </select>
                     </div>
@@ -40,10 +40,10 @@
                                 <ul class="dropdown-menu btn-block" role="menu">
                                   <%= @products.each do |product| %>
 
-                                  <li><a href="#"><%=link_to "#{product.name}",
+                                  <li><%=link_to "#{product.name}",
                                                              brand_car_product_types_path(:brand_id=> @brand.id,
                                                                                           :car_id => @car.id,
-                                                                                          :product_id => product.id) %></a></li>
+                                                                                          :product_id => product.id) %></li>
 
                                   <% end %>
                                 </ul>
@@ -100,7 +100,7 @@
 <div class="row">
 <% @items.each do |item| %>
 
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="panel panel-default panel-success panel-item">
        <b> <%= link_to "#{item.name}", brand_car_product_type_item_path(:id=> item.id,:item_id=> item.id, :type_id=> item.type.id,:product_id=> item.type.product.id,:car_id=> item.type.product.car.id,:brand_id => item.type.product.car.brand.id) %>
        </b><br><b>Price :</b> Rs.<%= item.price  %>

@@ -1,5 +1,6 @@
+<%= flash[:notice]  %>
 
-
+<% @user = "admin" %>
 <% if @user == "admin"%>
         <%= link_to 'New SubCategory' %>
         <!--brand_car_product_type_path- @brand,@car,@product,@type]-->
@@ -38,7 +39,7 @@
 
       <% @product.types.each do |type| %>
           <div class="type-title col-md-12">
-          <%= type.name %><br>
+          <%=link_to type.name, brand_car_product_type_items_path(:type_id=>type.id) %><br>
           </div>
                 <% @items = type.items.all %>
 

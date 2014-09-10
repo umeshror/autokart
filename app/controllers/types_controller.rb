@@ -16,7 +16,9 @@ class TypesController < ApplicationController
     @type = @product.types.new(type_params)
 
     if @product.save
-      redirect_to brand_car_product_types_path(:product_id =>@product.id)
+      redirect_to brand_car_product_types_path(:product_id =>@product.id), :notice => "Successfully Creatted...!!!"
+    else
+      redirect_to brand_car_product_types_path(:product_id =>@product.id), :notice => "Name should be unique...!!!"
     end
 
 

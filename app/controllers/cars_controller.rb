@@ -12,7 +12,7 @@ class CarsController < ApplicationController
     if @cars.save
       redirect_to brand_path(@brand),:notice=> "Success"
     else
-      redirect_to brand_car_path,:notice=> "failure"
+      redirect_to brand_path(@brand),:notice=> "Name should br unique"
 
     end
 

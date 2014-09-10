@@ -15,7 +15,11 @@ class ItemsController < ApplicationController
   def create
     @item = @type.items.new(item_params)
     if @item.save
-      redirect_to brand_car_product_type_items_path(:type_id => @type.id)
+      redirect_to brand_car_product_type_items_path(:type_id => @type.id), :notice => "Succefully created...!!!"
+    else
+      redirect_to brand_car_product_type_items_path(:type_id => @type.id),:notice => "All fields are manadatory...!!!"
+
+      #format.json { render json: @user.errors, status: :unprocessable_entity }
     end
   end
 
