@@ -12,30 +12,30 @@
 </div>
 
 <div class="col-md-9 panel panel-default  " >
-    <div class="col-md-12">
-        <div class="col-md-3 ">
-          <%= image_tag @item.image_url,size: "100x100" %>
-
-        </div>
-        <div class="col-md-9">
-          <div >
-            <b><%=@item.name%></b>
-                     <br>
-            <b>Price :</b> Rs.<%= @item.price  %>
-                     <br>
-            <b>Manufacturer: </b><%= @item.manufacturer %>
-                     <br>
-            <b>Description: </b> <%= @item.description %>
-                     <br>
-
-            <div class="btn">
-              <%= button_to 'Add to Cart', line_items_path(item_id: @item.id) , class: "btn-success" %>
-            </div>
-          </div>
-
-        </div>
-
-
+  <div class="col-md-12">
+    <div class="col-md-3 ">
+      <%= image_tag @item.image_url,size: "100x100" %>
 
     </div>
+    <div class="col-md-9">
+      <div >
+        <b><%=@item.name%></b>
+        <br>
+        <b>Price :</b> Rs.<%= @item.price  %>
+        <br>
+        <b>Manufacturer: </b><%= @item.manufacturer %>
+        <br>
+        <b>Description: </b> <%= @item.description %>
+        <br>
+
+        <div class="btn">
+          <%= button_to 'Add to Cart', line_items_path(item_id: @item.id) , class: "btn-success" %>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
 </div>

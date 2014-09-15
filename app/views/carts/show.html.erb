@@ -1,11 +1,81 @@
 <% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
-<h2>Your Pragmatic Cart</h2>
-<ul>
-  <% @cart.line_items.each do |line_item| %>
-      <li><%= line_item.item.name %></li><br><br>
 
-      <li><%= line_item.quantity %></li><br><br><br><br>
-  <% end %>
-</ul>
+
+
+
+
+<div class="col-md-9 panel panel-default  " >
+  <div class="col-md-12 ">
+    <div class="cart-list">
+            <% @cart.line_items.each do |line_item| %>
+            <div class="row">
+                <div class="col-md-3 ">
+
+                  <%= image_tag line_item.item.image_url,size: "100x100" %>
+
+                </div>
+                <div class="col-md-9">
+                  <div >
+                    <b><%= link_to line_item.item.name,brand_car_product_type_item_path(:id=>line_item.item.id,
+                                                                                        :item_id=>line_item.item.id,
+                                                                                        :type_id=>line_item.item.type.id,
+                                                                                        :product_id=>line_item.item.type.product.id,
+                                                                                        :car_id=>line_item.item.type.product.car.id,
+                                                                                        :brand_id =>line_item.item.type.product.car.brand.id) %></b>
+                    <div class=" pull-right">
+
+                        <%= link_to 'Remove',line_item_path(:line_item_id => line_item.id), method: :delete,
+                             data: { confirm: 'Are you sure?' } ,:class => "delete-cart" %>
+
+                    </div>
+
+                    <br>
+                    <b>Price :</b> Rs.<%= line_item.item.price  %>
+                    <br>
+                    <b> Quantity : </b> <%= line_item.quantity %></li>
+
+                    <br>
+                    <b>Manufacturer: </b><%= line_item.item.manufacturer %>
+                    <br>
+
+                   <div class="total-price pull-right"><b> TOTAL : </b> Rs. <%= line_item.total_price  %> </div>
+                  </div>
+
+                </div>
+            </div>
+            <div class="">
+                <hr>
+            </div>
+            <% end %>
+            <div class="grand-total pull-right ">
+                <b> GRAND TOTAL : </b> Rs.<%= @cart.grand_total   %>
+            </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-md-3">
+  <% @cart.line_items.each do |line_item| %>
+
+      <%= image_tag line_item.item.image_url,size: "50x50" %>
+
+      <b><%= link_to line_item.item.name,brand_car_product_type_item_path(:id=>line_item.item.id,
+                                                                          :item_id=>line_item.item.id,
+                                                                          :type_id=>line_item.item.type.id,
+                                                                          :product_id=>line_item.item.type.product.id,
+                                                                          :car_id=>line_item.item.type.product.car.id,
+                                                                          :brand_id =>line_item.item.type.product.car.brand.id) %></b>
+
+      <div class="">
+        <hr>
+      </div>
+      <br>
+<% end %>
+  <div class="total-price  "><b> SubTotal : </b> Rs.<%= @cart.grand_total   %> </div>
+    <br>
+  <div class="btn btn-block btn-success "> Checkout >>></div>
+
+</div>
