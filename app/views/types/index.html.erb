@@ -51,7 +51,7 @@
                                            </b><br><b>Price :</b> Rs.<%= item.price  %>
                                               <br><%= image_tag item.image_url,size: "55x55" %>
                                               <br><b>Manufacturer: </b><%= item.manufacturer %>
-                                              <br><b>Description: </b> <%= item.description %>
+                                              <br><b>Description: </b> <%= truncate((item.description)) %>
                                 </div>
                               </div>
                         <% end %>

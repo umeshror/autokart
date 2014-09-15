@@ -9,4 +9,21 @@ class Item < ActiveRecord::Base
   validates :description , :presence => true
   validates :manufacturer, :presence => true
 
+  has_many :line_items
+  before_destroy 'ensure_not_referenced_by_any_line_item' # ensure that there are no line items referencing this product
+
+
+
+
+  private
+
+  def ensure_not_referenced_by_any_line_item
+    if line_items.empty?
+      return true
+    else
+      errors.add(:base, 'Line Items present')
+      return false
+    end
+  end
+
 end

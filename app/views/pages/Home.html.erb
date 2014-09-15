@@ -102,12 +102,47 @@
 
     <div class="col-md-4">
       <div class="panel panel-default panel-success panel-item">
-       <b> <%= link_to "#{item.name}", brand_car_product_type_item_path(:id=> item.id,:item_id=> item.id, :type_id=> item.type.id,:product_id=> item.type.product.id,:car_id=> item.type.product.car.id,:brand_id => item.type.product.car.brand.id) %>
-       </b><br><b>Price :</b> Rs.<%= item.price  %>
-        <br><%= image_tag item.image_url,size: "55x55" %>
-        <br><b>Manufacturer: </b><%= item.manufacturer %>
-        <br><b>Description: </b> <%= item.description %>
+        <div class="product-menu">
+          <div class="img-responsive">
+             <%= image_tag item.image_url,size: "100x100" %>
+          </div>
+          <br>
+
+          <b>
+            <%= link_to "#{item.name}", brand_car_product_type_item_path(:id=> item.id,
+                                                                         :item_id=> item.id,
+                                                                         :type_id=> item.type.id,
+                                                                         :product_id=> item.type.product.id,
+                                                                         :car_id=> item.type.product.car.id,
+                                                                         :brand_id => item.type.product.car.brand.id) %>
+          </b>
+          <br><b>Price :</b> Rs.<%= item.price  %>
+          <br>
+        <b>Manufacturer: </b><%= item.manufacturer %>
+        <br><b>Description: </b> <%= truncate(item.description) %>
+        </div>
       </div>
     </div>
 <% end %>
 </div>
+
+<!--truncate("Once upon a time in a world far far away")-->
+<!--# => "Once upon a time in a world..."-->
+
+<!--truncate("Once upon a time in a world far far away", length: 17)-->
+<!--# => "Once upon a ti..."-->
+
+<!--truncate("Once upon a time in a world far far away", length: 17, separator: ' ')-->
+<!--# => "Once upon a..."-->
+
+<!--truncate("And they found that many people were sleeping better.", length: 25, omission: '... (continued)')-->
+<!--# => "And they f... (continued)"-->
+
+<!--truncate("<p>Once upon a time in a world far far away</p>")-->
+<!--# => "&lt;p&gt;Once upon a time in a wo..."-->
+
+<!--truncate("<p>Once upon a time in a world far far away</p>", escape: false)-->
+<!--# => "<p>Once upon a time in a wo..."-->
+
+  <!--truncate("Once upon a time in a world far far away") { link_to "Continue", "#" }-->
+  <!--# => "Once upon a time in a wo...<a href="#">Continue</a>"-->

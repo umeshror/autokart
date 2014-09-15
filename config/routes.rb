@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   #
   #get 'types/delete'
 
+  #get 'cart/show'
+
+  resources :carts
+  resources :line_items
+0
   resources :brands do
     resources :cars do
       resources :products do
