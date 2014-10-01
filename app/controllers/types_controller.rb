@@ -4,7 +4,8 @@ class TypesController < ApplicationController
     @car = @brand.cars.find(params[:car_id])
     @product=@car.products.find(params[:product_id])
     @type = Type.new
-
+#    @car = Car.find_by("id = ?", params[:dynamic][:car_id])
+    #@cities = City.where("country_id = ?", Country.first.id)
   end
 
   def create
@@ -33,7 +34,7 @@ class TypesController < ApplicationController
 
   def type_params
 
-    params.require(:type).permit(:name,:product_id)
+    params.require(:type).permit(:name,:sub,:product_id, :submit, :car_id, :brand_id)
 
   end
 end

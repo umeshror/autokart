@@ -22,7 +22,7 @@
         <li>  | </li>
         <li> <%= link_to 'SignUp', "#" %></li>
 
-        <li><b>  <%= link_to 'Cart', cart_path(@cart) ,:class => "btn btn-success cart" %> </b> </li>
+        <li><b>  <%= link_to 'Cart', cart_path(@cart) ,:class => "btn btn-success cart", :onClick => "checkout()" %> </b> </li>
 
       </ul>
     </div>

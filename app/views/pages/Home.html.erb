@@ -7,98 +7,89 @@
                     <div class="autopart-title">
                     Search Parts of Car
                     </div>
-                    <div class="input-group col-md-7 form-margin">
-                      <select class="form-control" name="bootstrap-theme" id="theme_chooser">
 
-                                <option value="">-Select Brand-</option>
-                                <%= @brands.each do |brand| %>
-                                <option value=<%= value =brand.name %>><%= brand.name %></option>
-                                <% end %>
-                      </select>
-                    </div>
+            <%= form_for :dynamic do |f| %>
+                  <div  class ="col-md-7 input-group form-margin">
 
-                    <div class="input-group col-md-7 form-margin">
-                      <select class="form-control" name="bootstrap-theme" id="theme_chooser">
-                                <option value="">-Select Model-</option>
-                                <%= @cars.each do |car| %>
-                                <option value=<%= car.name %>><%= car.name %></option>
-                                <% end %>
-                      </select>
-                    </div>
+                      <%= f.collection_select(  :brand_id , @brands.all, :id, :name,{:prompt => '--Select a Brand--'} ,{:class=> "  form-control vall  " }) %>
 
-                    <!--<div class="input-group col-md-7 form-margin">-->
-                      <!--<select class="form-control" name="bootstrap-theme" id="theme_chooser">-->
-                                  <!--<option value="AllCT">Select Category</option>-->
-                                  <!--<option value=></option>-->
-                                 <!---->
-                      <!--</select>-->
-                    <!--</div>-->
-                  <div class="btn-group input-group col-md-7 form-margin">
-                                <button type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown">
-                                  -Select Category- <span class="caret "></span>
-                                </button>
-                                <ul class="dropdown-menu btn-block" role="menu">
-                                  <%= @products.each do |product| %>
-
-                                  <li><%=link_to "#{product.name}",
-                                                             brand_car_product_types_path(:brand_id=> @brand.id,
-                                                                                          :car_id => @car.id,
-                                                                                          :product_id => product.id) %></li>
-
-                                  <% end %>
-                                </ul>
                   </div>
 
-                   <div class="input-group col-md-7 form-margin">
+                    <%#= f.grouped_collection_select :prop_sub_type_id, PropType.order(:name), :prop_sub_types, :name, :id, :name, :prompt => "-- Select Property Subtype --"  %>
 
+
+                  <div class="input-group col-md-7 form-margin">
+
+                    <%= f.grouped_collection_select(  :car_id , Brand.order(:name),:cars,:name, :id, :name,{:prompt => '--Select a Car--'} ,{:class=> "  form-control vallcar  "}) %>
+
+                  </div>
+                  <div class="input-group col-md-7 form-margin">
+
+                    <%= f.grouped_collection_select( :product_id , Car.order(:name),:products,:name, :id, :name,{:prompt => '--Select a category--'} ,{:class=> "  form-control vallproduct  "}) %>
+
+                  </div>
+                  <div class="input-group col-md-7 form-margin">
                        <button type="button" class="btn btn-primary form-margin btn-block" >
-                            Submit
+                           <div class="submit">
+                             Submit
+                           </div>
                        </button>
-
-                   </div>
+                  </div>
+            <% end %>
 
     </div>
   </div>
 
-  <div class="col-md-6">
-    <div class="panel-default">
-                  <div class="part-title">
-                      Search new Car
-                  </div>
-                  <div class="input-group col-md-7 form-margin">
-                    <select class="form-control" name="bootstrap-theme" id="theme_chooser">
+      <div class="col-md-6 ">
+        <div class="panel-default">
+                      <div class="part-title">
+                          Search new Car
+                      </div>
+                      <div class="input-group col-md-7 form-margin">
+                        <select class="form-control" name="bootstrap-theme" id="theme_chooser">
+                          <option value="">-Select Brand-</option>
+                      </select>
+                      </div>
 
-                      <option value="">-Select Brand-</option>
+                      <div class="input-group col-md-7 form-margin">
+                        <select class="form-control" name="bootstrap-theme" id="theme_chooser">
+                          <option value="">-Select Model-</option>
+                        </select>
+                      </div>
 
-                    </select>
-                  </div>
+                      <div class="input-group col-md-7 form-margin">
+                         <button type="button" class="btn btn-primary form-margin btn-block" >
+                          Submit
+                        </button>
+                      </div>
+        </div>
+      </div>
 
-                  <div class="input-group col-md-7 form-margin">
-                    <select class="form-control" name="bootstrap-theme" id="theme_chooser">
-
-
-
-                      <option value="">-Select Model-</option>
-                    </select>
-                  </div>
-
-                  <div class="input-group col-md-7 form-margin">
-
-                    <button type="button" class="btn btn-primary form-margin btn-block" >
-                      Submit
-                    </button>
-
-                  </div>
-
-
-    </div>
-  </div>
 </div>
 
 
 </div>
 <%= flash[:notice]  %>
 <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <% @items.each do |item| %>
 
     <div class="col-md-4">
