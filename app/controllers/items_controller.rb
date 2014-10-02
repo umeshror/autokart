@@ -34,9 +34,14 @@ class ItemsController < ApplicationController
   def set_id
 
     @brand = Brand.find(params[:brand_id])
-    @car = @brand.cars.find(params[:car_id])
-    @product = @car.products.find(params[:product_id])
-    @type = @product.types.find(params[:type_id])
+    @car = Car.find(params[:car_id])
+    @product = Product.find(params[:product_id])
+    @type = Type.find(params[:type_id])
+    #
+    #@brand = Brand.find(params[:brand_id])
+    #@car = @brand.cars.find(params[:car_id])
+    #@product = @car.products.find(params[:product_id])
+    #@type = @product.types.find(params[:type_id])
   end
 
   def item_params
