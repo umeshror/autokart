@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11926fb4-1c0f-42a1-88da-879748e49eb5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/items_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
     </list>
     <ignored path="autokart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="items_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/items_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="39" selection-start="864" selection-end="864" vertical-scroll-proportion="0.5996377" vertical-offset="315" max-vertical-offset="952">
+            <state line="44" column="5" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
@@ -101,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="54" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1768">
+            <state line="84" column="69" selection-start="3344" selection-end="3344" vertical-scroll-proportion="0.38405797" vertical-offset="1216" max-vertical-offset="1768">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -182,9 +182,9 @@
         <option value="$PROJECT_DIR$/app/models/brand.rb" />
         <option value="$PROJECT_DIR$/app/views/pages/Home.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/controllers/types_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/items_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -1274,15 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="54" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1768">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/types_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="115" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
@@ -1292,8 +1283,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/items_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="39" selection-start="864" selection-end="864" vertical-scroll-proportion="0.5996377" vertical-offset="315" max-vertical-offset="952">
+        <state line="44" column="5" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="952">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="69" selection-start="3344" selection-end="3344" vertical-scroll-proportion="0.38405797" vertical-offset="1216" max-vertical-offset="1768">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
