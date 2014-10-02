@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11926fb4-1c0f-42a1-88da-879748e49eb5" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\Development__autokart.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\Development__autokart2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\Production__autokart.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\Production__autokart2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\spec__autokart.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\spec__autokart2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\test__autokart.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\.idea\runConfigurations\test__autokart2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\app\assets\images\beckarnelyfilter.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\autokart\app\assets\images\fuelwaterseparatorfilter.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/autokart.iml" afterPath="$PROJECT_DIR$/.idea/autokart.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/brand.rb" afterPath="$PROJECT_DIR$/app/models/brand.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/car.rb" afterPath="$PROJECT_DIR$/app/models/car.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/item.rb" afterPath="$PROJECT_DIR$/app/models/item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/type.rb" afterPath="$PROJECT_DIR$/app/models/type.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/types_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/types_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="autokart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -117,7 +95,7 @@
       <file leaf-file-name="types_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/types_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.43515357" vertical-offset="0" max-vertical-offset="782">
+            <state line="26" column="0" selection-start="815" selection-end="815" vertical-scroll-proportion="0.7542662" vertical-offset="0" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
@@ -1314,7 +1292,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/types_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.43515357" vertical-offset="0" max-vertical-offset="782">
+        <state line="26" column="0" selection-start="815" selection-end="815" vertical-scroll-proportion="0.7542662" vertical-offset="0" max-vertical-offset="782">
           <folding />
         </state>
       </provider>
