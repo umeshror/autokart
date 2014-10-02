@@ -2,7 +2,7 @@ class TypesController < ApplicationController
   def index
     @brand = Brand.find(params[:brand_id])
     @car = @brand.cars.find(params[:car_id])
-    @product=@car.products.find(params[:product_id])
+    @product=Product.find(params[:product_id])
     @type = Type.new
 #    @car = Car.find_by("id = ?", params[:dynamic][:car_id])
     #@cities = City.where("country_id = ?", Country.first.id)

@@ -9,7 +9,8 @@ class PagesController < ApplicationController
     #@cars = @brand.cars.all
     #@car = Car.find( 1)
     #@products = @car.products.all
-    @items = Item.all
+    @type = Type.first
+    @items = @type.items.all
   end
 
   def About_Us
