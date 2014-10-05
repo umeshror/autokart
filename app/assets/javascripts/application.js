@@ -38,17 +38,18 @@ $(document).ready(function(){
         if( brand_id!= '' )
 
         {
+//will work on it
+//                    if('.vall :selected'){
+//                        alert(selected_b);
+//
+//                    }else{
+//                        selected_b = $('.vall').first().text();
+//                        alert(selected_b);
+//
+//                    }
+            selected_b =  $('.vall :selected').text() ;
 
-
-                    selected_b =  $('.vall :selected').text();
-
-                    //alert("brand_id"+ brand_id);
-            //        alert(selected_brand);
-//            //        alert(cars);
-//                    selected_b = selected_brand.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-//                    alert(selected_b);
                     options = $(cars).filter("optgroup[label="+selected_b+"]").html();
-            //        alert(options);
                     if (options){
                         $('#dynamic_car_id').html(options);
                         $('#dynamic_car_id').parent().show();
@@ -61,13 +62,8 @@ $(document).ready(function(){
                     $('.vallcar').change(function(){
                         selected_car =    $('.vallcar :selected').text();
                         car_id = $('.vallcar :selected').val();
-            //
-            //            alert(selected_car);
-            //            alert(products);
                         selected_c = selected_car.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            //            alert(selected_c);
                         options = $(products).filter("optgroup[label="+selected_c+"]").html();
-            //            alert(options);
                         if (options){
                             $('#dynamic_product_id').html(options);
                             $('#dynamic_product_id').parent().show();
@@ -80,10 +76,9 @@ $(document).ready(function(){
                             selected_product =    $('.vallproduct :selected').text();
                             product_id = $('.vallproduct :selected').val();
 
-            //                alert(selected_product);
                             $('.submit').click(function(){
-                                url =  "http://localhost:3000/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
-//                                url =  "http://autokart.herokuapp.com/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
+//                                url =  "http://localhost:3000/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
+                                url =  "http://autokart.herokuapp.com/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
 
                                 window.location.href = url;
             //                    alert(selected_b+"  "+selected_c+" "+selected_product  );
