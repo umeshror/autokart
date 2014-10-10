@@ -77,8 +77,8 @@ $(document).ready(function(){
                             product_id = $('.vallproduct :selected').val();
 
                             $('.submit').click(function(){
-//                                url =  "http://localhost:3000/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
-                                url =  "http://autokart.herokuapp.com/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
+                                url =  "http://localhost:3000/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
+                                //url =  "http://autokart.herokuapp.com/brands/"+brand_id+"/cars/"+car_id+"/products/"+product_id+"/types"
 
                                 window.location.href = url;
             //                    alert(selected_b+"  "+selected_c+" "+selected_product  );
