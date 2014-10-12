@@ -81,7 +81,7 @@ end
 
 end
 
-6000.times do
+5000.times do
 
 
   typelength = Type.all.length
