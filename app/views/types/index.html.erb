@@ -24,6 +24,8 @@
     <div class="col-md-3">
         <div class="panel panel-default typesbar">
            <div class="product-sidebar">
+<div class="typeshead">        <b>Select Category</b>
+</div>
                 <% @car.products.each do |product| %>
                     <div class="sidebar-menu">
                     <td><%= link_to "#{product.name}", brand_car_product_types_path(:brand_id => @brand.id, :car_id => @car.id , :product_id => product.id )  %> </td>
