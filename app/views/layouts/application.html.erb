@@ -3,7 +3,6 @@
 <head>
   <title>Autokart</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,7 +12,7 @@
     <div class="navbar-header " class = "imagee" >
       <%= link_to image_tag('logo.PNG'),'http://autokart.herokuapp.com/' %>
 
-      <%#= link_to image_tag('logo.PNG'),'root_path' %>
+      <%#= link_to image_tag('logo.PNG'),'/' %>
 
     </div>
     <div class="pull-right">
@@ -36,5 +35,7 @@
 <div class="container">
 <%= yield %>
 </div>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
 </body>
 </html>

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   resources :carts
   resources :line_items
-0
+
   resources :brands do
     resources :cars do
       resources :products do
